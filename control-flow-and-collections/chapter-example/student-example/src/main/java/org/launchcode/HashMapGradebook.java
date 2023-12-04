@@ -18,7 +18,7 @@ public class HashMapGradebook {
             System.out.print("Student: ");
             newStudent = input.nextLine();
 
-            if (!newStudent.equals("")) {
+            if (!newStudent.isEmpty()) {
                 System.out.print("Grade: ");
                 Double newGrade = input.nextDouble();
                 students.put(newStudent, newGrade);
@@ -27,7 +27,7 @@ public class HashMapGradebook {
                 input.nextLine();
             }
 
-        } while(!newStudent.equals(""));
+        } while(!newStudent.isEmpty());
 
         // Print class roster
         System.out.println("\nClass roster:");

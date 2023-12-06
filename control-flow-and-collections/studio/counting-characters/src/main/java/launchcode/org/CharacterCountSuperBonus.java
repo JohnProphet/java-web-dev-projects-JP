@@ -13,7 +13,7 @@ public class CharacterCountSuperBonus {
         String quoteFromFile = "";
 
         try {
-            File textFromFile = new File( pathname: "src/main/java/launchcode.org/quote.txt");
+            File textFromFile = new File("src/main/java/launchcode/org/quote.txt");
             Scanner myReader = new Scanner(textFromFile);
             if (myReader.hasNextLine()) {
                 quoteFromFile = myReader.nextLine();
@@ -23,28 +23,28 @@ public class CharacterCountSuperBonus {
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred when trying to read quote from file");
 
-        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-        char[] charArray = quoteFromFile.toUpperCase().toCharArray();
+            char[] charArray = quoteFromFile.toUpperCase().toCharArray();
 
-        HashMap<Character, Integer> counts = new HashMap<>();
+            HashMap<Character, Integer> counts = new HashMap<>();
 
-        for (char letter : charArray) {
+            for (char letter : charArray) {
 
-            if (alphabet.indexOf(letter) >= 0) {
+                if (alphabet.indexOf(letter) >= 0) {
 
-                if (counts.containsKey(letter)) {
-                    counts.put(letter, counts.get(letter) +1);
-                } else {
-                    counts.put(letter, 1);
+                    if (counts.containsKey(letter)) {
+                        counts.put(letter, counts.get(letter) + 1);
+                    } else {
+                        counts.put(letter, 1);
+                    }
+                }
+
+                for (Map.Entry<Character, Integer> count : counts.entrySet()) {
+                    System.out.println(count.getKey() + ": " + count.getValue());
                 }
             }
 
-            for (Map.Entry<Character, Integer> count : counts.entrySet()) {
-                System.out.println(count.getKey() + ": " + count.getValue());
-            }
         }
-    }
-}
     }
 }

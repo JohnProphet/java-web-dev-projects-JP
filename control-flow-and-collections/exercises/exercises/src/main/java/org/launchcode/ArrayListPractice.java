@@ -2,6 +2,7 @@ package org.launchcode;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class ArrayListPractice {
     public static int sumEven(ArrayList<Integer> arr) {
         int total = 0;
@@ -15,5 +16,8 @@ public class ArrayListPractice {
 
         System.out.println("Enter the word length: ");
         int numChars = input.nextInt();
+    }
+    public static void main(String[] args) {
+
     }
 }

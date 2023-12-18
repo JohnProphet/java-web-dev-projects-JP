@@ -22,7 +22,6 @@ public class CharacterCountBonus {
         for (char letter : charArray) {
 
             if (alphabet.indexOf(letter) >= 0) {
-
                 if (counts.containsKey(letter)) {
                     counts.put(letter, counts.get(letter) +1);
                 } else {

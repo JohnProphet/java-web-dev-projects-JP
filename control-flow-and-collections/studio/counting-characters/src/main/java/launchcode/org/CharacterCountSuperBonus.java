@@ -5,15 +5,19 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.nio.file.Paths;
 
 public class CharacterCountSuperBonus {
 
     public static void main(String[] args) {
+        System.out.println("Hello World!");
 
         String quoteFromFile = "";
 
         try {
-            File textFromFile = new File("src/main/java/launchcode/org/quote.txt");
+            System.out.println(Paths.get("").toAbsolutePath().getParent());
+
+            File textFromFile = new File("src/main/resources/quote.txt");
             Scanner myReader = new Scanner(textFromFile);
             if (myReader.hasNextLine()) {
                 quoteFromFile = myReader.nextLine();

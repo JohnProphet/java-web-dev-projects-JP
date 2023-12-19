@@ -1,11 +1,11 @@
 package org.launchcode;
 
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 class CarTest {
     Car test_car;
-
     @BeforeEach
     public void initCar() {
         test_car = new Car("Toyota", "Prius", 10, 50);

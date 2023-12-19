@@ -28,6 +28,10 @@ public class BalancedBrackets {
                 brackets--;
             }
         }
-        return brackets == 0;
+        if (brackets == 0) {
+            return brackets == 0;
+        } else {
+            return brackets == -1;
+        }
     }
 }
